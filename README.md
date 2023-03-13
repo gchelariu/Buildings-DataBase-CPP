@@ -1,4 +1,4 @@
-# Baza-de-date-a-cladirilor-pe-o-anumita-asezare
+# Cerinta
 
 Dându-se de la tastatură comenzi de adăugare/ștergere a unor clădiri sau a unor persoane cu statuturi diferite în acele clădiri, să se facă o statistică asupra anumitor atribute ce țin de anumite tipuri de persoane sau de tipul așezării, așa cum este spus în secțiunea de Date de ieșire. Ceea ce se vrea este crearea unei așezări, care poate fi sat, oraș sau capitală, depinzând de numărul și de tipul clădirilor care se dau de la tastatură să fie adăugate în acea așezare.
 
