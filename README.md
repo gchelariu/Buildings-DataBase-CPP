@@ -4,12 +4,18 @@ Dându-se de la tastatură comenzi de adăugare/ștergere a unor clădiri sau a 
 
 Date de intrare:
 
-primul cuvânt va fi acțiunea pe care vreți să o faceți.
-al doilea cuvânt este ceea ce vreți să adăugați sau să ștergeți.
-dacă vrem să adăugăm o clădire, următoarea dată de intrare va fi numele clădirii.
-dacă vrem să adăugăm o persoană, următoarele date de la intrare vor fi numele persoanei, vârsta persoanei, salariul persoanei și numele clădirii în care vrem să adăugăm acea persoană.
-dacă vrem să ștergem o persoană, următoarele date de la intrare vor fi numele persoanei și numele clădirii.
-Date de iesire:
+Se vor linii până la EOF. O linie este alcătuită din următoarele elemente:
+- primul cuvânt va fi acțiunea pe care vreți să o faceți. Această comandă poate fi add sau remove. Dacă această comandă este add atunci se va face o adăugare, iar dacă este remove se va face o ștergere.
+- al doilea cuvânt este ceea ce vreți să adăugați sau să ștergeți. Clădirile doar se pot adăuga, nu și șterge, iar persoanele suportă ambele comenzi.
+        - dacă vrem să adăugăm o clădire, acest al doilea cuvânt poate fi unul din cuvintele CityHall, Hospital, PoliceStation, House sau Block.
+        - dacă vrem să adăugăm sau să ștergem o anumită persoană dintr-o clădire, acest al doilea cuvânt poate fi unul din cuvintele coordinator, employee sau citizen. Pentru fiecare tip de clădire, aceste cuvinte au semnificații diferite astfel:
+                - coordinator pot fi doar primarii, proprietarii de case și administratorii de bloc.
+                - employee pot fi doar doctorii și polițiștii.
+                - citizen pot fi doar angajații primăriei, pacienții spitalului, persoanele arestate, locuitorii caselor și locuitorii blocurilor.
+- în continuare există următoarele posibilități:
+        - dacă vrem să adăugăm o clădire, următoarea dată de intrare va fi numele clădirii. Pentru case (House) după numele clădirii se va citi și numărul maxim de persoane care pot locui în acea casă, iar pentru blocuri (Block) după numele clădirii se vor citi numărul de etaje al blocului și număr maxim de persoane per etaj. De exemplu, linia add Hospital ReginaMaria trebuie să adauge un spital numit ReginaMaria.
+        - dacă vrem să adăugăm o persoană, următoarele date de la intrare vor fi numele persoanei, vârsta persoanei, salariul persoanei și numele clădirii în care vrem să adăugăm acea persoană. Este clar acest lucru depinde de al doilea parametru. Ca exemplu, dacă avem o clădire numită ReginaMaria, aceasta fiind un spital, iar linia noastră este add citizen Andrei 23 222.22 ReginaMaria, este clar că Andrei va fi pacient al spitalului deoarece el are statutul de citizen, iar citizenii unui spital sunt pacienții, doctorii fiind considerați employee. Dacă voiam ca persoana să fie doctor în spital, am fi avut o linie de genul add employee Andrei 23 222.22 ReginaMaria.
+        - dacă vrem să ștergem o persoană, următoarele date de la intrare vor fi numele persoanei și numele clădirii. Vor considera că nu există citizen sau employee cu același nume în aceeași instituție. Exemplificând în continuare, dacă avem o linie de forma remove citizen Andrei ReginaMaria se va elimina pacientul Andrei din spitalul ReginaMaria.
 
 Ieșirea va consta dintr-o statistică a așezării create folosind aceste clădirii astfel:
 
